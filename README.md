@@ -1,7 +1,7 @@
 hex2rgb
 =======
 
-Converts hex color to rgb. Calculates corresponding yiq (either black or white).
+Converts hex color to rgb. Calculates corresponding yiq foreground (either black or white).
 
 
 ## Example
