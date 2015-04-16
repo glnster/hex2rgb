@@ -1,14 +1,14 @@
 hex2rgb
 =======
 
-Converts hex color to rgb. Calculates corresponding yiq foreground (either black or white).
+Converts hex color to rgb and calculates corresponding yiq foreground (either black or white).
 
 
 ## Example
 
-For a dark hex color, hex2rgb will give you the rgb equivalent. It will also calculate an appropriate constrasting foreground and return either 'black' or 'white'.
+For a dark hex color, hex2rgb will give you the rgb equivalent. It will also calculate and return an appropriate constrasting foreground (either 'black' or 'white').
 
-Here's hex2rgb in action in one of my prototype projects. Note the black or white text color (foreground) based on the background color.
+Here's hex2rgb in action. Note the black or white text color (foreground) based on the background color.
 
 ![example.png](example.png)
 
