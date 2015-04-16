@@ -59,6 +59,6 @@ var hex2rgb = function(hex, options) {
   };
 
 
-});
+};
 
 module.exports = hex2rgb;
