@@ -47,7 +47,7 @@ var hex2rgb = function(hex, options) {
     yiqres = (yiq >= 128 || isNaN(yiq)) ? 'black' : 'white';
 
   } else if (options.debug === true) {
-    console.error("Expected 3 or 6 HEX-ONLY chars. Returning defaults.");
+    console.error("(hex2rgb) " + hex + ": Expected 3 or 6 HEX-ONLY chars. Returning defaults.");
   }
 
   return {

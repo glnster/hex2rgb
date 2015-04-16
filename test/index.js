@@ -21,7 +21,7 @@ describe('#rgb', function () {
   });
 
   it('returns default [0, 0, 0] for non-hex (bad) input', function() {
-    expect(hex2rgb('p033ff').rgb).to.eql([0,0,0]);
+    expect(hex2rgb('00PS1E').rgb).to.eql([0,0,0]);
   });
 });
 
@@ -37,7 +37,7 @@ describe('#yiq', function() {
   });
 
     it('returns default white for non-hex (bad) input', function() {
-    expect(hex2rgb('p033ff').yiq).to.equal('white');
+    expect(hex2rgb('00PS1E').yiq).to.equal('white');
   });
 });
 
@@ -45,6 +45,6 @@ describe('#yiq', function() {
 
 describe('#options', function() {
   it("console log's a string error when {debug: true}", function() {
-    expect(hex2rgb('p033ff', {debug: true}).rgb).to.eql([0,0,0]);
+    expect(hex2rgb('00PS1E', {debug: true}).rgb).to.eql([0,0,0]);
   });
 });
