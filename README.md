@@ -59,4 +59,5 @@ Thanks to Brent Ertz for his node module article, [Creating and publishing a nod
 
 ## Release History
 
+- 0.4.0 Update description
 - 0.1.0 Initial release
