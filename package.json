@@ -21,7 +21,12 @@
     "hex to rgb"
   ],
   "author": "Glenn Cueto <glenncueto@gmail.com> (http://gcgrafix.com)",
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/glnster/hex2rgb/blob/master/LICENSE-MIT"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/glnster/hex2rgb/issues"
   },
