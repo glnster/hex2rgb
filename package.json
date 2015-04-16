@@ -1,0 +1,33 @@
+{
+  "name": "hex2rgb",
+  "version": "0.1.0",
+  "description": "Converts hex color to rgb. Calculates corresponding yiq.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"test me\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glnster/hex2rgb.git"
+  },
+  "keywords": [
+    "hex",
+    "rgb",
+    "yiq",
+    "convert",
+    "hex to rgb"
+  ],
+  "author": "Glenn Cueto <glenncueto@gmail.com> (http://gcgrafix.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glnster/hex2rgb/issues"
+  },
+  "homepage": "https://github.com/glnster/hex2rgb",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "mocha": "^2.2.4"
+  }
+}
