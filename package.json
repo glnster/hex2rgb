@@ -1,7 +1,7 @@
 {
   "name": "hex2rgb",
-  "version": "0.2.0",
-  "description": "Converts hex color to rgb. Calculates corresponding yiq foreground (either black or white).",
+  "version": "0.3.0",
+  "description": "Converts hex color to rgb. Calculates corresponding foreground (either black or white).",
   "main": "index.js",
   "directories": {
     "test": "test"
