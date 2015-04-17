@@ -10,6 +10,10 @@ describe('#rgb', function () {
     expect(hex2rgb('03f').rgb).to.eql([0,51,255]);
   });
 
+  it('returns [0,0,0] from hex 000000', function() {
+    expect(hex2rgb('000000').rgb).to.eql([0,0,0]);
+  });
+
   it('throws a TypeError for null input', function() {
     expect(function(){
       hex2rgb();
