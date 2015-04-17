@@ -1,0 +1,34 @@
+{
+  "name": "hex2rgb",
+  "main": "hex2rgb.js",
+  "version": "0.5.0",
+  "homepage": "https://github.com/glnster/hex2rgb",
+  "authors": [
+    "Glenn Cueto <glenncueto@gmail.com>"
+  ],
+  "description": "Converts hex color to rgb. Calculates corresponding foreground.",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "hex",
+    "rgb",
+    "yiq",
+    "convert",
+    "hex to rgb"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "example.png",
+    "package.json",
+    "Makefile",
+    "LICENSE-MIT",
+    "README.md",
+    "index.js"
+  ]
+}

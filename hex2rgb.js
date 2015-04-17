@@ -14,8 +14,7 @@
  * @return {string} yiq - Default 'black' or 'white' as a foreground color
  *                        against the given hex.
  */
-
-var hex2rgb = function(hex, options) {
+var HEX2RGB = function(hex, options) {
   "use strict";
 
   // checks and defaults
@@ -55,7 +54,4 @@ var hex2rgb = function(hex, options) {
     yiq: yiqres
   };
 
-
 };
-
-module.exports = hex2rgb;
