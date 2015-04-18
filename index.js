@@ -27,6 +27,7 @@ var hex2rgb = function(hex, options) {
   var hlen = hex.length,
     cleanHex,
     RGB = [0, 0, 0],
+    rgbString = 'rgb(0,0,0)',
     yiqres = 'white';
   options = options || {};
   options.debug = options.debug || false;
@@ -42,6 +43,7 @@ var hex2rgb = function(hex, options) {
   if (cleanHex !== null) {
     var num = parseInt(cleanHex, 16);
     RGB = [num >> 16, num >> 8 & 255, num & 255];
+    rgbString = 'rgb(' + RGB[0] + ', ' + RGB[1] + ', ' + RGB[2] + ')';
 
     var yiq = ((RGB[0] * 299) + (RGB[1] * 587) + (RGB[2] * 114)) / 1000;
     yiqres = (yiq >= 128 || isNaN(yiq)) ? 'black' : 'white';
@@ -52,9 +54,9 @@ var hex2rgb = function(hex, options) {
 
   return {
     rgb: RGB,
+    rgbString: rgbString,
     yiq: yiqres
   };
-
 
 };
 

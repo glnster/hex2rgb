@@ -29,6 +29,15 @@ describe('#rgb', function () {
   });
 });
 
+describe('#rgbString', function () {
+  it("returns 'rgb(0, 51, 255)' from hex input 0033ff", function() {
+    expect(hex2rgb('0033ff').rgbString).to.equal('rgb(0, 51, 255)');
+  });
+
+  it("returns 'rgb(0,0,0)' from invalid input", function() {
+    expect(hex2rgb('00PS1E').rgbString).to.equal('rgb(0,0,0)');
+  });
+});
 
 
 describe('#yiq', function() {
