@@ -1,5 +1,6 @@
-hex2rgb
+hex2rgb [![NPM](https://img.shields.io/npm/v/hex2rgb.svg)](https://www.npmjs.com/package/hex2rgb) [![Bower](https://img.shields.io/bower/v/hex2rgb.svg)](https://github.com/glnster/hex2rgb) ![Chai](https://img.shields.io/badge/chai-passing-brightgreen.svg)
 =======
+
 
 Converts hex color to rgb and calculates corresponding yiq foreground (either black or white).
 
@@ -91,11 +92,12 @@ Returns a string of either `'white'` or `'black'`. If the input is invalid `'whi
 No formal styleguide, but please maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Thanks
-Thanks to Brent Ertz for his node module article, [Creating and publishing a node.js module](https://quickleft.com/blog/creating-and-publishing-a-node-js-module/)
+- Brian Suda for his article, [Calculating Color Contrast](http://24ways.org/2010/calculating-color-contrast/), on 24 ways.
+- Brent Ertz for his node module article, [Creating and publishing a node.js module](https://quickleft.com/blog/creating-and-publishing-a-node-js-module/).
 
 
 ## Release History
-
+- 1.0.0 Add badges & update readme
 - 0.8.0 Add rgbString property
 - 0.6.0 - 0.7.0 Publish to Bower
 - 0.2.0 - 0.5.0 Update description
