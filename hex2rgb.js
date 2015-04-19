@@ -29,8 +29,8 @@ var hex2rgb = function(hex, options) {
     RGB = [0, 0, 0],
     rgbString = 'rgb(0,0,0)',
     yiqres = 'white';
-  options = options || {};
-  options.debug = options.debug || false;
+  options = (typeof options !== 'undefined') ? options : {};
+  options.debug = options.hasOwnProperty('debug') ? options.debug : false;
 
   // expand hex input
   if (hlen === 3) {
