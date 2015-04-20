@@ -18,7 +18,9 @@
     "rgb",
     "yiq",
     "convert",
-    "hex to rgb"
+    "hex to rgb",
+    "contrast",
+    "foreground"
   ],
   "author": "Glenn Cueto <glenncueto@gmail.com> (http://gcgrafix.com)",
   "licenses": [

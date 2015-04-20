@@ -1,4 +1,4 @@
-hex2rgb [![NPM](https://img.shields.io/npm/v/hex2rgb.svg)](https://www.npmjs.com/package/hex2rgb) [![Bower](https://img.shields.io/bower/v/hex2rgb.svg)](https://github.com/glnster/hex2rgb) ![Chai](https://img.shields.io/badge/chai-passing-brightgreen.svg)
+hex2rgb [![NPM](https://img.shields.io/npm/v/hex2rgb.svg)](https://www.npmjs.com/package/hex2rgb) [![Bower](https://img.shields.io/bower/v/hex2rgb.svg)](https://github.com/glnster/hex2rgb) [![Build Status](https://travis-ci.org/glnster/hex2rgb.svg?branch=master)](https://travis-ci.org/glnster/hex2rgb)
 =======
 
 
@@ -97,8 +97,10 @@ No formal styleguide, but please maintain the existing coding style. Add unit te
 
 
 ## Release History
-- 1.0.0 Add badges & update readme
+
+- 1.3.0 Add badges & update readme
+- 1.0.0 Lock in release
 - 0.8.0 Add rgbString property
-- 0.6.0 - 0.7.0 Publish to Bower
-- 0.2.0 - 0.5.0 Update description
+- 0.7.0 Publish to Bower
+- 0.5.0 Update descriptions
 - 0.1.0 Initial release
