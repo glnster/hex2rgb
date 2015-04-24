@@ -15,10 +15,10 @@
 <div class="header high">
     <h1>Code coverage report for <span class="entity">hex2rgb/index.js</span></h1>
     <h2>
-        Statements: <span class="metric">100% <small>(20 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Branches: <span class="metric">100% <small>(16 / 16)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">100% <small>(22 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(20 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Functions: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
-        Lines: <span class="metric">100% <small>(20 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(22 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
     <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">hex2rgb/</a> &#187; index.js</div>
@@ -88,8 +88,10 @@
 61
 62
 63
-64</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+64
+65
+66
+67</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -110,40 +112,44 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">18</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11</span>
-<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11</span>
-<span class="cline-any cline-yes">11</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-yes">7</span>
-<span class="cline-any cline-yes">7</span>
-<span class="cline-any cline-yes">7</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-yes">7</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-yes">17</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,10 +173,9 @@
  * @return {string} yiq - Default 'black' or 'white' as a foreground color
  *                        against the given hex.
  */
-/*jshint bitwise: false */
 &nbsp;
 var hex2rgb = function(hex, options) {
-  "use strict";
+  'use strict';
 &nbsp;
   // checks and defaults
   if (typeof hex !== 'string') {
@@ -178,13 +183,17 @@ var hex2rgb = function(hex, options) {
   }
 &nbsp;
   hex = hex.replace(/^#/, '');
+&nbsp;
+  options = options || {};
+  options.debug = (typeof options.debug === 'boolean') ? options.debug : false;
+  options.rgbStringDefault = (typeof options.rgbStringDefault === 'string') ? options.rgbStringDefault : 'inherit';
+  options.yiqDefault = (typeof options.yiqDefault === 'string') ? options.yiqDefault : 'inherit';
+&nbsp;
   var hlen = hex.length,
     cleanHex,
-    RGB = [0, 0, 0],
-    rgbString = 'rgb(0,0,0)',
-    yiqres = 'white';
-  options = (typeof options !== 'undefined') ? options : {};
-  options.debug = options.hasOwnProperty('debug') ? options.debug : false;
+    RGB = [255, 255, 255],
+    rgbString = options.rgbStringDefault,
+    yiqres = options.yiqDefault;
 &nbsp;
   // expand hex input
   if (hlen === 3) {
@@ -203,7 +212,7 @@ var hex2rgb = function(hex, options) {
     yiqres = (yiq &gt;= 128 || isNaN(yiq)) ? 'black' : 'white';
 &nbsp;
   } else if (options.debug === true) {
-    console.error("(hex2rgb) " + hex + ": Expected 3 or 6 HEX-ONLY chars. Returning defaults.");
+    console.error('(hex2rgb) ' + hex + ': Expected 3 or 6 HEX-ONLY chars. Returning defaults.');
   }
 &nbsp;
   return {
@@ -219,7 +228,7 @@ module.exports = hex2rgb;</pre></td></tr>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Apr 23 2015 17:17:30 GMT-0700 (PDT)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Apr 24 2015 14:00:41 GMT-0700 (PDT)</div>
 </div>
 <script src="../prettify.js"></script>
 <script>

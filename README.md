@@ -50,15 +50,16 @@ var background,
 	badhex = '00PS1E';
 
 background = hex2rgb(hex).rgb; // => [0, 51, 255]
-background = hex2rgb(hex).rgbString; // => 'rgb(0, 51, 255)'
 background = hex2rgb(shorthex).rgb; // => [0, 51, 255]
 background = hex2rgb(hashhex).rgb; // => [0, 51, 255]
+background = hex2rgb(hex).rgbString; // => 'rgb(0, 51, 255)'
 foreground = hex2rgb(hex).yiq; // => white
 
-// try with bad input and with debug on
-background = hex2rgb(badhex, {debug: true}).rgb;
+// try with bad input and with options specified
+background = hex2rgb(badhex, {debug: true, rgbStringDefault:'#e9e9e9'}).rgb;
 // logs "(hex2rgb) 00PS1E: Expected 3 or 6 HEX-ONLY chars. Returning defaults."
-// Returns rgb [0,0,0] and yiq 'white' as fall-backs.
+// Returns rgb [255, 255, 255], rgbString '#e9e9e9'
+// and yiq 'inherit' as fall-backs.
 
 
 ```
@@ -72,16 +73,24 @@ A hex-only string of 3 or 6 characters. If the string has a # prefix, the # gets
 
 #### {debug: true | false}
 
-You can pass {debug:true} as a second argument to enable errors logged to console.
+You can pass {debug:true} to enable errors logged to console.
+
+#### {rgbStringDefault: "String e.g. transparent | black | #e9e9e9"}
+
+As of v2 you can specify a default string that `.rgbString` will return when hex input is invalid or yet to be calculated. In v1, `.rgbString` returned "rgb(0,0,0)" (black).
+
+#### {yiqDefault: "String e.g. inherit | gray | #333"}
+
+Similar to rgbStringDefault above. In v1 `.yiq` returned "white" by default.
 
 #### .rgb
-Returns an array in `[r, g, b]` format. If the input is invalid `[0, 0, 0]` is returned as a fallback.
+Returns an array in `[r, g, b]` format. If hex input is invalid or yet to be calculated `[255, 255, 255]` (white) is returned as a fallback.
 
 #### .rgbString
-Returns a string in `rgb(r, g, b)` format. If the input is invalid `rgb(0,0,0)` is returned as a fallback.
+Returns a string in `rgb(r, g, b)` format. If hex input is invalid or yet to be calculated, either `'inherit'` or your specified string value is returned as a fallback.
 
 #### .yiq
-Returns a string of either `'white'` or `'black'`. If the input is invalid `'white'` is returned as a fallback.
+Returns a string of either `'white'` or `'black'`. If hex input is invalid or yet to be calculated, either `'inherit'` or your specified string value is returned as a fallback.
 
 ## Tests
 
@@ -99,9 +108,10 @@ No formal styleguide, but please maintain the existing coding style. Add unit te
 
 ## Release History
 
-- 1.4.0 Add badges & update readme
-- 1.0.0 Lock in release
-- 0.8.0 Add rgbString property
-- 0.7.0 Publish to Bower
-- 0.5.0 Update descriptions
-- 0.1.0 Initial release
+- 2.0.0 - Returns [255, 255, 255], 'inherit', specified values as defaults/fallbacks
+- 1.4.0 - Returns [0,0,0], 'rgb(0,0,0)' & 'white' as defaults/fallbacks
+- 1.0.0 - Lock in release
+- 0.8.0 - Add rgbString property
+- 0.7.0 - Publish to Bower
+- 0.5.0 - Update descriptions
+- 0.1.0 - Initial release

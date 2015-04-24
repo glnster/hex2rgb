@@ -8,11 +8,14 @@
  * Converts hex color to rgb. Calculates corresponding foreground.
  *
  * @param {string} hex - The hex color to be converted. Can be 3 or 6 HEX-ONLY chars.
- * @param {boolean} debug - Optional. Default=false.
- * @param {string} darkyiq, lightyiq - Optional foreground colors.
- * @return {array} rgb - [x,x,x] or default [0,0,0].
- * @return {string} yiq - Default 'black' or 'white' as a foreground color
- *                        against the given hex.
+ * Optional options object:
+ * @param {boolean} debug - Default=false.
+ * @param {string} rgbStringDefault - A default rgbString will return, e.g. "inherit" or "white" or "#e9e9e9".
+ * @param {string} yiqDefault - A default yiq will return, e.g. "inherit" or "black" or "#333".
+ * @return {array} rgb - [x,x,x] or default [255,255,255].
+ * @return {string} rgbString - rgb(x,x,x). Defaults to 'inherit' or rgbStringDefault's value.
+ * @return {string} yiq - 'black' or 'white' as a foreground color
+ *                        against the given hex. Defaults to 'inherit' or yiqDefault's value.
  */
 
 var hex2rgb = function(hex, options) {
@@ -24,13 +27,17 @@ var hex2rgb = function(hex, options) {
   }
 
   hex = hex.replace(/^#/, '');
+
+  options = options || {};
+  options.debug = (typeof options.debug === 'boolean') ? options.debug : false;
+  options.rgbStringDefault = (typeof options.rgbStringDefault === 'string') ? options.rgbStringDefault : 'inherit';
+  options.yiqDefault = (typeof options.yiqDefault === 'string') ? options.yiqDefault : 'inherit';
+
   var hlen = hex.length,
     cleanHex,
-    RGB = [0, 0, 0],
-    rgbString = 'rgb(0,0,0)',
-    yiqres = 'white';
-  options = (typeof options !== 'undefined') ? options : {};
-  options.debug = options.hasOwnProperty('debug') ? options.debug : false;
+    RGB = [255, 255, 255],
+    rgbString = options.rgbStringDefault,
+    yiqres = options.yiqDefault;
 
   // expand hex input
   if (hlen === 3) {
