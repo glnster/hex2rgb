@@ -1,4 +1,4 @@
-hex2rgb [![NPM](https://img.shields.io/npm/v/hex2rgb.svg)](https://www.npmjs.com/package/hex2rgb) [![Bower](https://img.shields.io/bower/v/hex2rgb.svg)](https://github.com/glnster/hex2rgb) [![Build Status](https://travis-ci.org/glnster/hex2rgb.svg?branch=master)](https://travis-ci.org/glnster/hex2rgb)
+hex2rgb [![NPM](https://img.shields.io/npm/v/hex2rgb.svg)](https://www.npmjs.com/package/hex2rgb) [![Bower](https://img.shields.io/bower/v/hex2rgb.svg)](https://github.com/glnster/hex2rgb) [![Build Status](https://travis-ci.org/glnster/hex2rgb.svg?branch=master)](https://travis-ci.org/glnster/hex2rgb) [![Test Coverage](https://codeclimate.com/github/glnster/hex2rgb/badges/coverage.svg)](https://codeclimate.com/github/glnster/hex2rgb)
 =======
 
 
@@ -86,6 +86,7 @@ Returns a string of either `'white'` or `'black'`. If the input is invalid `'whi
 ## Tests
 
 `npm test`
+`gulp test` to generate code coverage
 
 ## Contributing
 
@@ -98,7 +99,7 @@ No formal styleguide, but please maintain the existing coding style. Add unit te
 
 ## Release History
 
-- 1.3.0 Add badges & update readme
+- 1.4.0 Add badges & update readme
 - 1.0.0 Lock in release
 - 0.8.0 Add rgbString property
 - 0.7.0 Publish to Bower

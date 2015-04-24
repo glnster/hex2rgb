@@ -14,6 +14,8 @@
  * @return {string} yiq - Default 'black' or 'white' as a foreground color
  *                        against the given hex.
  */
+/*jshint bitwise: false */
+
 
 var hex2rgb = function(hex, options) {
   "use strict";
