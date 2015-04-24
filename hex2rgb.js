@@ -14,11 +14,9 @@
  * @return {string} yiq - Default 'black' or 'white' as a foreground color
  *                        against the given hex.
  */
-/*jshint bitwise: false */
-
 
 var hex2rgb = function(hex, options) {
-  "use strict";
+  'use strict';
 
   // checks and defaults
   if (typeof hex !== 'string') {
@@ -51,7 +49,7 @@ var hex2rgb = function(hex, options) {
     yiqres = (yiq >= 128 || isNaN(yiq)) ? 'black' : 'white';
 
   } else if (options.debug === true) {
-    console.error("(hex2rgb) " + hex + ": Expected 3 or 6 HEX-ONLY chars. Returning defaults.");
+    console.error('(hex2rgb) ' + hex + ': Expected 3 or 6 HEX-ONLY chars. Returning defaults.');
   }
 
   return {
