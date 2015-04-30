@@ -110,7 +110,7 @@ No formal styleguide, but please maintain the existing coding style. Add unit te
 
 ## Release History
 
-- 2.1.0 - Minor description updates
+- 2.2.0 - Minor description updates
 - 2.0.0 - Returns [255, 255, 255], 'inherit', specified values as defaults/fallbacks
 - 1.4.0 - Returns [0,0,0], 'rgb(0,0,0)' & 'white' as defaults/fallbacks
 - 1.0.0 - Lock in release

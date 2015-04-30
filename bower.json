@@ -1,7 +1,7 @@
 {
   "name": "hex2rgb",
   "main": "hex2rgb.js",
-  "version": "2.0.0",
+  "version": "2.2.0",
   "homepage": "https://github.com/glnster/hex2rgb",
   "authors": [
     "Glenn Cueto <glenncueto@gmail.com>"
