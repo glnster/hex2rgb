@@ -1,8 +1,9 @@
-hex2rgb [![NPM](https://img.shields.io/npm/v/hex2rgb.svg)](https://www.npmjs.com/package/hex2rgb) [![Bower](https://img.shields.io/bower/v/hex2rgb.svg)](https://github.com/glnster/hex2rgb) [![Build Status](https://travis-ci.org/glnster/hex2rgb.svg?branch=master)](https://travis-ci.org/glnster/hex2rgb) [![Test Coverage](https://codeclimate.com/github/glnster/hex2rgb/badges/coverage.svg)](https://codeclimate.com/github/glnster/hex2rgb)
+hex2rgb
 =======
 
+Converts hex color to rgb and calculates appropriate corresponding foreground.
 
-Converts hex color to rgb and calculates corresponding yiq foreground (either black or white).
+[![NPM](https://img.shields.io/npm/v/hex2rgb.svg)](https://www.npmjs.com/package/hex2rgb) [![Bower](https://img.shields.io/bower/v/hex2rgb.svg)](https://github.com/glnster/hex2rgb) [![Build Status](https://travis-ci.org/glnster/hex2rgb.svg?branch=master)](https://travis-ci.org/glnster/hex2rgb) [![Test Coverage](https://codeclimate.com/github/glnster/hex2rgb/badges/coverage.svg)](https://codeclimate.com/github/glnster/hex2rgb)
 
 
 ## Example
@@ -95,6 +96,7 @@ Returns a string of either `'white'` or `'black'`. If hex input is invalid or ye
 ## Tests
 
 `npm test`
+
 `gulp test` to generate code coverage
 
 ## Contributing
@@ -108,6 +110,7 @@ No formal styleguide, but please maintain the existing coding style. Add unit te
 
 ## Release History
 
+- 2.1.0 - Minor description updates
 - 2.0.0 - Returns [255, 255, 255], 'inherit', specified values as defaults/fallbacks
 - 1.4.0 - Returns [0,0,0], 'rgb(0,0,0)' & 'white' as defaults/fallbacks
 - 1.0.0 - Lock in release

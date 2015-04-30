@@ -1,7 +1,7 @@
 {
   "name": "hex2rgb",
   "version": "2.0.0",
-  "description": "Converts hex color to rgb. Calculates corresponding foreground (either black or white).",
+  "description": "Converts hex color to rgb and calculates appropriate corresponding foreground.",
   "main": "index.js",
   "directories": {
     "test": "test"

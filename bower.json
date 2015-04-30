@@ -6,7 +6,7 @@
   "authors": [
     "Glenn Cueto <glenncueto@gmail.com>"
   ],
-  "description": "Converts hex color to rgb. Calculates corresponding foreground.",
+  "description": "Converts hex color to rgb and calculates appropriate corresponding foreground.",
   "moduleType": [
     "node"
   ],
